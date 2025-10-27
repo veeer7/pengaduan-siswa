@@ -17,4 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->middleware('cekRole:admin');
+
+
 require __DIR__.'/auth.php';
