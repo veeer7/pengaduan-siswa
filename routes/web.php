@@ -22,4 +22,6 @@ Route::get('/admin', function () {
 })->middleware('cekRole:admin');
 
 
+
+
 require __DIR__.'/auth.php';
